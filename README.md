@@ -1,2 +1,2 @@
 # rvst-docker
-Rust web docker container 
+A docker container for Rust API
