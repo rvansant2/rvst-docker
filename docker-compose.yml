@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    restart: always
+    volumes:
+      - ./src:/rvst-docker/src:delegated
+      - ./Cargo.toml:/rvst-docker/Cargo.toml:delegated
+    ports:
+      - 8000:8000
+    logging:
+      options:
+        max-size: 10m
+    
